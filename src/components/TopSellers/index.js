@@ -48,7 +48,7 @@ constructor(props) {
     const randomBeers = this.randomBeer();
     return (
     <View>
-      <Text style={styles.heading}>Sales</Text>
+      <Text style={styles.heading}>Sales ($)</Text>
       <VictoryChart
         domainPadding={{ x: 30 }}
         animate={{duration: 500}}>
