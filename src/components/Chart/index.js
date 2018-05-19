@@ -1,48 +1,23 @@
 import React from 'react';
-import { range, random } from 'lodash';
-import { VictoryChart, VictoryBar } from 'victory-native';
 
 class Chart extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: this.getData()
-    };
-  }
+    render() {
 
-  getData() {
-    const bars = 7;
-    return range(bars).map((bar) => {
-      return {x: bar + 1, y: 3};
-    });
-  }
+        const data = [ 50, 10, 40, 95, -4, -24, 85, 91, 35, 53, -53, 24, 50, -20, -80 ]
 
-  render() {
-    return (
-      <VictoryChart
-        domainPadding={{ x: 20 }}
-        animate={{duration: 500}}
-      >
-        <VictoryBar
-          data={this.state.data}
-          style={{
-            data: { fill: "tomato", width: 12 }
-          }}
-          animate={{
-            onExit: {
-              duration: 500,
-              before: () => ({
-                _y: 0,
-                fill: "orange",
-                label: "BYE"
-              })
-            }
-          }}
-        />
-      </VictoryChart>
-    );
-  }
+        return (
+            <AreaChart
+                style={{ height: 200 }}
+                data={ data }
+                contentInset={{ top: 30, bottom: 30 }}
+                curve={ shape.curveNatural }
+                svg={{ fill: 'rgba(134, 65, 244, 0.8)' }}
+            >
+                <Grid/>
+            </AreaChart>
+        )
+    }
 }
 
 export default Chart;
