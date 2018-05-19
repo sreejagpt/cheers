@@ -33,7 +33,7 @@ export default class CustomerSatisfaction extends React.Component {
 
   render() {
     return (
-      <View>
+      <View style={styles.container}>
         <Text style={styles.heading}>Customer Satisfaction</Text>
         <VictoryPie
           innerRadius={100}
@@ -50,6 +50,10 @@ export default class CustomerSatisfaction extends React.Component {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   heading: {
     fontSize: 30,
     textAlign: 'center',
