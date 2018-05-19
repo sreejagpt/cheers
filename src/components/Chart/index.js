@@ -25,7 +25,7 @@ constructor(props) {
   }
 
   getData() {
-    const bars = random(6, 10);
+    const bars = 4;
     return range(bars).map((bar) => {
       return {x: bar + 1, y: random(2, 10)};
     });
@@ -40,11 +40,12 @@ constructor(props) {
         animate={{duration: 500}}>
 
         <VictoryGroup
-          offset={35}
+          offset={25}
           animate={{duration: 500}}
+          colorScale={colours}
         >
           <VictoryBar
-            data={[{ x: 1, y: 1 }, { x: 2, y: 2 }, { x: 3, y: 5 }]}
+            data={this.state.data}
             style={{ data: { fill: this.randomColour(), width: 20 } }}
             animate={{
               onExit: {
@@ -58,7 +59,7 @@ constructor(props) {
           />
         <VictoryBar
           style={{ data: { fill: this.randomColour(), width: 20 } }}
-          data={[{ x: 1, y: 2 }, { x: 2, y: 1 }, { x: 3, y: 7 }]}
+          data={this.state.data}
               animate={{
                 onExit: {
                   duration: 500,
