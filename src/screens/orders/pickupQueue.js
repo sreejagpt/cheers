@@ -2,22 +2,20 @@ import React from 'react';
 import { StyleSheet, Text, View, FlatList } from 'react-native';
 import { List, ListItem } from 'react-native-elements';
 import Hero from './hero';
+import FulfilledIcon from './fulfilledIcon';
 
-export default ({ status, onPress, orders }) => {
-    const [head, ...tail] = orders;
+export default ({ status, onFulfilled, fulfilledOrders }) => {
     return (
         <List style={styles.container}>
-            <Hero data={head} status={status} onPress={onPress}/>
             {
-                tail.map(({ avatar_url, id, createdAt, amount }, index) => (
+                fulfilledOrders.map(({ avatar_url, id, createdAt, amount }, index) => (
                     <ListItem
                         roundAvatar
-                        hideChevron
                         key={index}
                         avatar={{ uri: avatar_url }}
                         title={`Order #${id}`}
                         subtitle={createdAt}
-                        rightTitle={amount}
+                        rightIcon={<FulfilledIcon onPress={() => onFulfilled(id)}/>}
                     />
                 ))
             }

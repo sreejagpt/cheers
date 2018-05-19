@@ -14,7 +14,7 @@ const drinksList = [
     }
 ];
 
-export default ({ data }) => {
+export default ({ data, status, onPress }) => {
     return (
         <View style={styles.container}>
             <List containerStyle={styles.list}>
@@ -23,7 +23,7 @@ export default ({ data }) => {
                     avatar={{ uri: data.avatar_url }}
                     title={`Order #${data.id}`}
                     subtitle={data.createdAt}
-                    rightIcon={<RightIcon />}
+                    rightIcon={<RightIcon status={status} onPress={onPress}/>}
                     containerStyle={styles.listItem}
                 />
             </List>
