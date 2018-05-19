@@ -6,6 +6,7 @@ export default class OrdersScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+        <Text>Orders Screen</Text>
         <Queue/>
       </View>
     );
