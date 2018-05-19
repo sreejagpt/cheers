@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
-import Svg, {Circle} from 'react-native-svg';
+import Svg, {Circle, Text as SvgText} from 'react-native-svg';
 import { random } from 'lodash';
 
 class AvgWaitTime extends React.Component {
@@ -23,9 +23,19 @@ class AvgWaitTime extends React.Component {
                 strokeWidth="7"
                 fill="#ff59B5">
             </Circle>
+            <SvgText
+              x="50%"
+              y="50%"
+              stroke="#40162d"
+              fill="#40162d"
+              textAnchor="middle"
+              fontSize={30}
+              fontWeight="bold"
+              fontFamily="open-sans">
+                2 minutes
+            </SvgText>
           </Svg>
 
-          <Text style={styles.text}>2 minutes</Text>
         </View>
     );
    }
@@ -35,16 +45,6 @@ const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  text: {
-    position: 'absolute',
-    top: '50%',
-    left: '35%',
-    fontWeight: 'bold',
-    textAlign: 'center',
-    color: '#40162d',
-    fontSize: 30,
-    fontFamily: 'open-sans',
   },
   heading: {
     fontSize: 30,

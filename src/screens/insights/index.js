@@ -1,13 +1,16 @@
 import React from 'react';
-import { StyleSheet, View, ScrollView } from 'react-native';
+import { StyleSheet, View, ScrollView, Platform, StatusBar } from 'react-native';
 import TopSellers from '../../components/TopSellers';
 import AvgWaitTime from '../../components/AvgWaitTime';
 import CustomerSatisfaction from '../../components/CustomerSatisfaction';
+import Header from '../../components/Header';
 
 export default class InsightsScreen extends React.Component {
   render() {
     return (
       <ScrollView contentContainerStyle={styles.container}>
+        <Header navigation={this.props.navigation} />
+
         <View style={styles.chart}>
           <TopSellers/>
         </View>
@@ -27,16 +30,13 @@ export default class InsightsScreen extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'column',
-    backgroundColor: '#eff0f3',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#EFF0F3',
+    marginTop: Platform.os === 'ios' ? 20: StatusBar.currentHeight,
   },
 
   chart: {
     backgroundColor: '#fff',
-    width: '98%',
-    marginTop: 50,
+    marginBottom: 40,
   },
 });
 
