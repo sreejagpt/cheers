@@ -44,10 +44,12 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#40162d',
     fontSize: 30,
+    fontFamily: 'open-sans',
   },
   heading: {
     fontSize: 30,
     textAlign: 'center',
+    fontFamily: 'open-sans',
   }
 });
 export default AvgWaitTime;
