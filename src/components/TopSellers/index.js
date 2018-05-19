@@ -1,6 +1,7 @@
 import React from 'react';
 import { range, random } from 'lodash';
 import { VictoryChart, VictoryBar, VictoryGroup } from 'victory-native';
+import { StyleSheet, View, Text } from 'react-native';
 
 const colours = ['#903266', '#FFA5D7', '#ff59B5', '#7f536B', '#CC4790'];
 
@@ -35,6 +36,8 @@ constructor(props) {
 
   render() {
     return (
+    <View>
+      <Text style={styles.heading}>Sales</Text>
       <VictoryChart
         domainPadding={{ x: 30 }}
         animate={{duration: 500}}>
@@ -72,8 +75,17 @@ constructor(props) {
         />
         </VictoryGroup>
       </VictoryChart>
+    </View>
     );
   } 
 }
+
+const styles = StyleSheet.create({
+  heading: {
+    fontSize: 30,
+    textAlign: 'center',
+  }
+});
+
 
 export default TopSellers;

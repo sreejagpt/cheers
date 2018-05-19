@@ -10,6 +10,7 @@ class AvgWaitTime extends React.Component {
    render() {
      return (
       <View>
+        <Text style={styles.heading}>Average Wait Time</Text>
         <Svg
             height="300"
             width="100%"
@@ -37,12 +38,16 @@ const styles = StyleSheet.create({
   },
   text: {
     position: 'absolute',
-    top: '40%',
+    top: '50%',
     left: '35%',
     fontWeight: 'bold',
+    textAlign: 'center',
     color: '#40162d',
     fontSize: 30,
   },
-
+  heading: {
+    fontSize: 30,
+    textAlign: 'center',
+  }
 });
 export default AvgWaitTime;
