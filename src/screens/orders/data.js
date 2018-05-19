@@ -3,14 +3,14 @@ export const orders = [
       id: '134',
       avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
       createdAt: '9:30PM',
-      amount: '$23.40',
+      amount: '$39.00',
       drinksList: [
         {
-            name: 'Vodka Lime Soda',
+            name: 'Cold Buttered Rum',
             quantity: 1,
         },
         {
-            name: 'Martini',
+            name: 'Sneaky Tiki Time',
             quantity: 1,
         }
       ],
@@ -33,8 +33,8 @@ export const orders = [
     },
     {
         id: '136',
-        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
-        createdAt: '9:30PM',
+        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/kfriedson/128.jpg',
+        createdAt: '9:33PM',
         amount: '$23.40',
         drinksList: [
         {
@@ -49,8 +49,8 @@ export const orders = [
     },
     {
         id: '137',
-        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
-        createdAt: '9:32PM',
+        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg',
+        createdAt: '9:34PM',
         amount: '$13.10',
         drinksList: [
         {

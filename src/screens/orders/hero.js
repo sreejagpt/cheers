@@ -35,8 +35,9 @@ const styles = StyleSheet.create({
         paddingVertical: 15,
         borderTopWidth: 1,
         borderBottomWidth: 1,
-        borderTopColor: 'red',
-        borderBottomColor: 'red',
+        borderTopColor: '#cbd2d9',
+        borderBottomColor: '#cbd2d9',
+        backgroundColor: 'white',
     },
     list: {
         marginTop: 0,

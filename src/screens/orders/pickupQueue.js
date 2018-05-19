@@ -6,7 +6,7 @@ import FulfilledIcon from './fulfilledIcon';
 
 export default ({ status, onFulfilled, fulfilledOrders }) => {
     return (
-        <List style={styles.container}>
+        <List containerStyle={styles.container}>
             {
                 fulfilledOrders.map(({ avatar_url, id, createdAt, amount }, index) => (
                     <ListItem
@@ -25,7 +25,8 @@ export default ({ status, onFulfilled, fulfilledOrders }) => {
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
+        backgroundColor: '#EFF0F3',
+        marginTop: 0,
     },
   });
   

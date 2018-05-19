@@ -6,7 +6,7 @@ import Hero from './hero';
 export default ({ status, onPress, orders }) => {
     const [head, ...tail] = orders;
     return (
-        <List style={styles.container}>
+        <List containerStyle={styles.container}>
             <Hero data={head} status={status} onPress={onPress}/>
             {
                 tail.map(({ avatar_url, id, createdAt, amount }, index) => (
@@ -27,7 +27,8 @@ export default ({ status, onPress, orders }) => {
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
+      backgroundColor: '#EFF0F3',
+      marginTop: 0,
     },
   });
   

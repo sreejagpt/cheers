@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Platform, StatusBar } from 'react-native';
 import Queue from './queue';
 import PickupQueue from './pickupQueue';
 import { orders } from './data';
@@ -32,9 +32,13 @@ export default class OrdersScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Orders</Text>
+        <View style={styles.textContainer}>
+          <Text style={styles.title}>Orders queue</Text>
+        </View>
         {this.state.orders.length > 0 && <Queue status={this.state.orderStatus} onPress={this.onPress} orders={this.state.orders}/>}
-        <Text>Ready to pick up</Text>
+        <View style={styles.textContainer}>
+          <Text style={styles.title}>Ready to pick up</Text>
+        </View>
         <PickupQueue status={this.state.orderStatus} onFulfilled={this.onFulfilled} fulfilledOrders={this.state.fulfilledOrders}/>
       </View>
     );
@@ -43,6 +47,17 @@ export default class OrdersScreen extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
+    marginTop: Platform.os === 'ios' ? 20 : StatusBar.currentHeight,
     flex: 1,
+    backgroundColor: '#EFF0F3',
   },
+  textContainer: {
+    paddingVertical: 5,
+    paddingLeft: 5,
+    backgroundColor: '#903266',
+  },
+  title: {
+    fontWeight: 'bold',
+    color: 'white',
+  }
 });
