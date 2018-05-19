@@ -5,7 +5,7 @@ import { VictoryChart, VictoryBar, VictoryGroup } from 'victory-native';
 
 const colours = ['#903266', '#FFA5D7', '#ff59B5', '#7f536B', '#CC4790'];
 
-class Chart extends React.Component {
+class TopSellers extends React.Component {
 constructor(props) {
     super(props);
     this.state = {
@@ -87,4 +87,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Chart;
+export default TopSellers;
