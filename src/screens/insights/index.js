@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import TopSellers from '../../components/TopSellers';
 import AvgWaitTime from '../../components/AvgWaitTime';
+import CustomerSatisfaction from '../../components/CustomerSatisfaction';
 
 export default class InsightsScreen extends React.Component {
   render() {
@@ -14,6 +15,11 @@ export default class InsightsScreen extends React.Component {
         <View style={styles.chart}>
           <AvgWaitTime/>
         </View>
+
+        <View style={styles.chart}>
+          <CustomerSatisfaction/>
+        </View>
+
       </ScrollView>
     );
   }
