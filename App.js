@@ -11,7 +11,7 @@ export default class App extends React.Component {
   }
 
   async _loadAssetsAsync() {
-    Font.loadAsync({
+    await Font.loadAsync({
       'open-sans': require('./assets/fonts/OpenSans-Regular.ttf'),
     });
   }
@@ -22,11 +22,9 @@ export default class App extends React.Component {
         <AppLoading
           startAsync={this._loadAssetsAsync}
           onFinish={() => this.setState({ isReady: true })}
-          onError={console.warn}
         />
       );
-    } else {
-      return <Root />;
     }
+    return <Root />;
   }
 }

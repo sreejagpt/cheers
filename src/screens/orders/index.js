@@ -59,5 +59,7 @@ const styles = StyleSheet.create({
   title: {
     fontWeight: 'bold',
     color: 'white',
+    fontFamily: 'open-sans',
+    fontSize: 30,
   }
 });
