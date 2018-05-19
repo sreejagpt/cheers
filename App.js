@@ -1,22 +1,10 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import Chart from './src/components/Chart';
+import { Root } from './src/navigation';
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Chart/>
-      </View>
+      <Root />
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
