@@ -18,6 +18,8 @@ export default ({ status, onPress, orders }) => {
                         title={`Order #${id}`}
                         subtitle={createdAt}
                         rightTitle={amount}
+                        rightTitleStyle={{ color: '#43484D'}}
+                        fontFamily={'open-sans'}
                     />
                 ))
             }

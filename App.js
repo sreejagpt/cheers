@@ -3,11 +3,8 @@ import { Root } from './src/navigation';
 import { Font, AppLoading } from 'expo';
 
 export default class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isReady: false,
-    };
+  state = {
+    isReady: false,
   }
 
   async _loadAssetsAsync() {

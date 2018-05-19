@@ -7,6 +7,6 @@ const renderStatus = status => states[status];
 
 export default ({ status, onPress }) => (
     <Badge containerStyle={{ backgroundColor: '#903266' }} onPress={onPress}>
-        <Text style={{ color: 'white' }}>{ renderStatus(status) }</Text>
+        <Text style={{ color: 'white', fontFamily: 'open-sans', fontSize: 15 }}>{ renderStatus(status) }</Text>
     </Badge>
 );

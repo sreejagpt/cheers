@@ -11,9 +11,11 @@ export default ({ data, status, onPress }) => {
                     roundAvatar
                     avatar={{ uri: data.avatar_url }}
                     title={`Order #${data.id}`}
+                    titleStyle={{ fontSize: 15 }}
                     subtitle={data.createdAt}
                     rightIcon={<RightIcon status={status} onPress={onPress}/>}
                     containerStyle={styles.listItem}
+                    fontFamily={'open-sans'} 
                 />
             </List>
             <List containerStyle={styles.list}>
@@ -22,7 +24,9 @@ export default ({ data, status, onPress }) => {
                         key={dl.name}
                         hideChevron
                         title={`${dl.quantity} X ${dl.name}`}
+                        titleStyle={{ fontSize: 18 }}
                         containerStyle={styles.listItem}
+                        fontFamily={'open-sans'}
                     />
                 )) }
             </List>

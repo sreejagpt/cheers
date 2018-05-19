@@ -1,8 +1,9 @@
 import React from 'react';
-import { StyleSheet, Text, View, Platform, StatusBar } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Platform, StatusBar, TouchableOpacity } from 'react-native';
 import Queue from './queue';
 import PickupQueue from './pickupQueue';
 import { orders } from './data';
+import Header from '../../components/Header';
 
 export default class OrdersScreen extends React.Component {
   state = {
@@ -31,7 +32,8 @@ export default class OrdersScreen extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
+        <Header navigation={this.props.navigation}/>
         <View style={styles.textContainer}>
           <Text style={styles.title}>Orders queue</Text>
         </View>
@@ -40,26 +42,26 @@ export default class OrdersScreen extends React.Component {
           <Text style={styles.title}>Ready to pick up</Text>
         </View>
         <PickupQueue status={this.state.orderStatus} onFulfilled={this.onFulfilled} fulfilledOrders={this.state.fulfilledOrders}/>
-      </View>
+      </ScrollView>
     );
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: Platform.os === 'ios' ? 20 : StatusBar.currentHeight,
     flex: 1,
     backgroundColor: '#EFF0F3',
+    marginTop: Platform.os === 'ios' ? 20: StatusBar.currentHeight,
   },
   textContainer: {
     paddingVertical: 5,
-    paddingLeft: 5,
+    paddingLeft: 12,
     backgroundColor: '#903266',
   },
   title: {
     fontWeight: 'bold',
     color: 'white',
     fontFamily: 'open-sans',
-    fontSize: 30,
+    fontSize: 18,
   }
 });
