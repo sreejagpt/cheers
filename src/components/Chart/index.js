@@ -1,5 +1,6 @@
 import React from 'react';
 import { range, random } from 'lodash';
+import { StyleSheet, View } from 'react-native';
 import { VictoryChart, VictoryBar, VictoryGroup } from 'victory-native';
 
 const colours = ['#903266', '#FFA5D7', '#ff59B5', '#7f536B', '#CC4790'];
@@ -10,7 +11,7 @@ constructor(props) {
     this.state = {
       data: this.getData()
     };
-  }
+}
 
   componentDidMount() {
     this.setStateInterval = window.setInterval(() => {
@@ -35,6 +36,7 @@ constructor(props) {
 
   render() {
     return (
+    <View style={styles.container}>
       <VictoryChart
         domainPadding={{ x: 30 }}
         animate={{duration: 500}}>
@@ -72,9 +74,17 @@ constructor(props) {
         />
         </VictoryGroup>
       </VictoryChart>
+      </View>
     );
   } 
-
 }
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    width: '95%', 
+  },
+});
 
 export default Chart;
