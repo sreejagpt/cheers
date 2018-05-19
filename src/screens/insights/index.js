@@ -28,7 +28,7 @@ export default class InsightsScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
-    backgroundColor: '#979797',
+    backgroundColor: '#eff0f3',
     alignItems: 'center',
     justifyContent: 'center',
   },

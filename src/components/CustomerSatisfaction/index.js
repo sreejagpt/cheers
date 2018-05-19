@@ -40,7 +40,7 @@ export default class CustomerSatisfaction extends React.Component {
           labels={(d) => d.x}
           startAngle={-170}
           colorScale={['#903266', '#fff']}
-          labelRadius={3}
+          labelRadius={2}
           style={{ labels: { fill: "black", fontSize: 50, fontWeight: "bold" } }}
           data={this.state.data}
         />
