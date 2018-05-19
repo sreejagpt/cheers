@@ -3,17 +3,6 @@ import { StyleSheet, View, Text, Image } from 'react-native'
 import { Card, List, ListItem, Button } from 'react-native-elements'
 import RightIcon from './rightIcon';
 
-const drinksList = [
-    {
-        name: 'Vodka Lime Soda',
-        quantity: 1,
-    },
-    {
-        name: 'Martini',
-        quantity: 1,
-    }
-];
-
 export default ({ data, status, onPress }) => {
     return (
         <View style={styles.container}>
@@ -28,7 +17,7 @@ export default ({ data, status, onPress }) => {
                 />
             </List>
             <List containerStyle={styles.list}>
-                { drinksList.map(dl => (
+                { data.drinksList.map(dl => (
                     <ListItem
                         key={dl.name}
                         hideChevron
