@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView, Platform, StatusBar, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Platform, StatusBar, TouchableOpacity, Image } from 'react-native';
 import Queue from './queue';
 import PickupQueue from './pickupQueue';
 import { orders } from './data';
@@ -10,6 +10,7 @@ export default class OrdersScreen extends React.Component {
     orderStatus: 0,
     orders,
     fulfilledOrders: [],
+    showLoadingPage: true,
   }
 
   onPress = () => {
@@ -31,6 +32,14 @@ export default class OrdersScreen extends React.Component {
   }
 
   render() {
+    if (this.state.showLoadingPage) {
+      const splash = require('../../../assets/splash.png');
+      return (
+        <TouchableOpacity style={{ flex: 1 }} onPress={() => this.setState({ showLoadingPage: false }) }>
+          <Image style={{ flex: 1, resizeMode: 'cover', width: null, height: null }} source={splash} />
+        </TouchableOpacity>
+      )
+    }
     return (
       <ScrollView style={styles.container}>
         <Header navigation={this.props.navigation}/>
