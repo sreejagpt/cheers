@@ -41,7 +41,7 @@ export default class CustomerSatisfaction extends React.Component {
           startAngle={-170}
           colorScale={['#903266', '#fff']}
           labelRadius={2}
-          style={{ labels: { fill: "black", fontSize: 50, fontWeight: "bold" } }}
+          style={{ labels: { fill: "black", fontSize: 50, fontFamily: 'open-sans', fontWeight: "bold" } }}
           data={this.state.data}
         />
       </View>
