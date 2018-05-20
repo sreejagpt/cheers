@@ -11,4 +11,24 @@ export const Root = createDrawerNavigator({
     [screenNames.INSIGHTS]: {
       screen: InsightsScreen
     },
+
+    [screenNames.STORE_MENU]: {
+      screen: OrdersScreen,
+    },
+
+    [screenNames.REPORTS]: {
+      screen: OrdersScreen,
+    },
+
+    [screenNames.SETTINGS]: {
+      screen: OrdersScreen,
+    },
+
+    [screenNames.EMPLOYEES]: {
+      screen: OrdersScreen,
+    },
+
+    [screenNames.LOGOUT]: {
+      screen: OrdersScreen,
+    },
   });
